@@ -4134,7 +4134,7 @@ body, html {
 .pearl-container {
   position: absolute;
   width: 200px;
-  height: 200px;
+  height: 350px;
   transition: all 0.6s ease;
   transform-origin: center center;
   z-index: 2;
@@ -4173,9 +4173,9 @@ body, html {
 .tx-t{
     font-weight: bold;
     font-size: 17px;
-    transform: translateY(150);
     color: #ffffff;
     animation: four-direction-glow 2s infinite ease-in-out;
+    margin-top: -80px;
 }
 
 /* 글자 반짝거림 반복 */
@@ -4223,7 +4223,7 @@ body, html {
   opacity: 0.9;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
   animation: bounce 1.5s infinite;
-  margin-top: 50px;
+  margin-top: 70px;
 }
 
 .mouseover p {
@@ -4249,7 +4249,7 @@ body, html {
   pointer-events: none;
   animation: sparkle 2s infinite ease-in-out;
   margin-left: -50px;
-  margin-top: 60px;
+  margin-top: 100px;
 }
 /* Hover 시 박스로 변신 */
 .pearl-container:hover {
