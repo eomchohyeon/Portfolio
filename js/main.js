@@ -20,12 +20,33 @@
 
 
 // 자기소개 영상
-  document.getElementById('videoTrigger').addEventListener('click', function (e) {
+ document.getElementById('videoTrigger').addEventListener('click', function (e) {
     e.preventDefault();
     const videoContainer = document.getElementById('videoContainer');
     videoContainer.classList.toggle('hidden');
   });
 
+  const videoContainer = document.getElementById('videoContainer');
+  const videoHTML = `
+    <video id="introVideo" controls muted width="800" poster="images/videomainimg.jpg">
+      <source src="images/introduction.mp4" type="video/mp4">
+    </video>
+  `;
+
+  // 처음에 비디오 생성
+  videoContainer.innerHTML = videoHTML;
+
+  // 영상 종료 시 이벤트 바인딩
+  function bindVideoEndedEvent() {
+    const introVideo = document.getElementById('introVideo');
+    introVideo.addEventListener('ended', function () {
+      // 비디오를 제거 후 다시 추가하여 poster 다시 표시
+      videoContainer.innerHTML = videoHTML;
+      bindVideoEndedEvent(); // 다시 바인딩 필요
+    });
+  }
+
+  bindVideoEndedEvent();
   
 
     // 마우스 따라다니기
