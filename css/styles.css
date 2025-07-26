@@ -4105,7 +4105,7 @@ body, html {
 }
 .tx-t{
     font-weight: bold;
-    font-size: 17px;
+    font-size: 1.2vw;
     color: #ffffff;
     animation: four-direction-glow 2s infinite ease-in-out;
     position: absolute;
@@ -4155,7 +4155,7 @@ body, html {
 }
 
 .mouseover img {
-  width: 12px;
+  width: 1vw;
   height: auto; 
   opacity: 0.9;
   filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
@@ -4164,36 +4164,37 @@ body, html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 70px;
+  margin-top: 60px;
 }
 
 .mouseover p {
   color: black;
-  font-size: 5px;
-  margin-top: 140px;
+  font-size: 0.4vw;
+  margin-top: 130px;
 }
 
 .scene {
   animation: wave 5s infinite ease-in-out;
 }
 
-
+.parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* 반드시 필요 */
+    height: 100vh; /* 예시로 높이 지정 */
+  }
 .pearl {
   position: absolute;
   width: 5vw; /* 반응형 크기 */
   height: 5vw;
   max-width: 100px;
-  max-height: 100px; 
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  max-height: 100px;
   transition: opacity 0.6s ease;
+  margin-top: 135px;
   z-index: 3;
   pointer-events: none;
   animation: sparkle 2s infinite ease-in-out;
-  margin-left: -38px;
-  margin-top: 20px;
 }
 /* Hover 시 박스로 변신 */
 .pearl-container:hover {
